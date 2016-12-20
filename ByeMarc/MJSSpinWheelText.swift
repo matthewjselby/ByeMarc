@@ -22,8 +22,8 @@ class MJSSpinWheelText: UIView {
             let segmentMiddle: CGFloat = CGFloat(circleSegmentIndex) * segmentWidth
             let textLinePath = UIBezierPath()
             textLinePath.move(to: CGPoint(x: self.superview!.bounds.midX, y: self.superview!.bounds.midY))
-            let opposite = sin((segmentMiddle + 90) * CGFloat(M_PI / 180)) * 150 + self.superview!.bounds.midY
-            let adjacent = cos((segmentMiddle + 90) * CGFloat(M_PI / 180)) * 150 + self.superview!.bounds.midX
+            let opposite = sin((segmentMiddle + 90) * CGFloat(M_PI / 180)) * 170 + self.superview!.bounds.midY
+            let adjacent = cos((segmentMiddle + 90) * CGFloat(M_PI / 180)) * 170 + self.superview!.bounds.midX
             textLinePath.addLine(to: CGPoint(x: opposite, y: adjacent))
             
             let textStyle = NSMutableParagraphStyle()
