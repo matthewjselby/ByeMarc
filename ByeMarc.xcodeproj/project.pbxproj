@@ -12,12 +12,12 @@
 		C9E8E31A1E09A8DC00E37E97 /* BezierString.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E8E3171E09A8DC00E37E97 /* BezierString.swift */; };
 		C9E8E31B1E09A8DC00E37E97 /* Geometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E8E3181E09A8DC00E37E97 /* Geometry.swift */; };
 		C9E8E31D1E09AA2500E37E97 /* MJSSpinWheelText.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E8E31C1E09AA2500E37E97 /* MJSSpinWheelText.swift */; };
+		C9E8E31F1E09C78B00E37E97 /* MJSSpinWheel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E8E31E1E09C78B00E37E97 /* MJSSpinWheel.swift */; };
 		C9FD72851E097C2A000834F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FD72841E097C2A000834F0 /* AppDelegate.swift */; };
 		C9FD72871E097C2A000834F0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FD72861E097C2A000834F0 /* ViewController.swift */; };
 		C9FD728A1E097C2A000834F0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9FD72881E097C2A000834F0 /* Main.storyboard */; };
 		C9FD728C1E097C2A000834F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9FD728B1E097C2A000834F0 /* Assets.xcassets */; };
 		C9FD728F1E097C2A000834F0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9FD728D1E097C2A000834F0 /* LaunchScreen.storyboard */; };
-		C9FD72991E09804E000834F0 /* MJSSpinWheel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FD72981E09804E000834F0 /* MJSSpinWheel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +26,7 @@
 		C9E8E3171E09A8DC00E37E97 /* BezierString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BezierString.swift; sourceTree = "<group>"; };
 		C9E8E3181E09A8DC00E37E97 /* Geometry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Geometry.swift; sourceTree = "<group>"; };
 		C9E8E31C1E09AA2500E37E97 /* MJSSpinWheelText.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MJSSpinWheelText.swift; sourceTree = "<group>"; };
+		C9E8E31E1E09C78B00E37E97 /* MJSSpinWheel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MJSSpinWheel.swift; sourceTree = "<group>"; };
 		C9FD72811E097C2A000834F0 /* ByeMarc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ByeMarc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9FD72841E097C2A000834F0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C9FD72861E097C2A000834F0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -33,7 +34,6 @@
 		C9FD728B1E097C2A000834F0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C9FD728E1E097C2A000834F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C9FD72901E097C2A000834F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C9FD72981E09804E000834F0 /* MJSSpinWheel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MJSSpinWheel.swift; path = ../MJSSpinWheel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,9 +66,9 @@
 		C9FD72831E097C2A000834F0 /* ByeMarc */ = {
 			isa = PBXGroup;
 			children = (
+				C9E8E31E1E09C78B00E37E97 /* MJSSpinWheel.swift */,
 				C9FD72841E097C2A000834F0 /* AppDelegate.swift */,
 				C9FD72861E097C2A000834F0 /* ViewController.swift */,
-				C9FD72981E09804E000834F0 /* MJSSpinWheel.swift */,
 				C9E8E31C1E09AA2500E37E97 /* MJSSpinWheelText.swift */,
 				C9E8E3141E09878700E37E97 /* MJSSpinWheelPointer.swift */,
 				C9E8E3161E09A8DC00E37E97 /* Bezier.swift */,
@@ -155,13 +155,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C9FD72991E09804E000834F0 /* MJSSpinWheel.swift in Sources */,
 				C9E8E31B1E09A8DC00E37E97 /* Geometry.swift in Sources */,
 				C9E8E31A1E09A8DC00E37E97 /* BezierString.swift in Sources */,
 				C9E8E3191E09A8DC00E37E97 /* Bezier.swift in Sources */,
 				C9FD72871E097C2A000834F0 /* ViewController.swift in Sources */,
 				C9E8E3151E09878700E37E97 /* MJSSpinWheelPointer.swift in Sources */,
 				C9FD72851E097C2A000834F0 /* AppDelegate.swift in Sources */,
+				C9E8E31F1E09C78B00E37E97 /* MJSSpinWheel.swift in Sources */,
 				C9E8E31D1E09AA2500E37E97 /* MJSSpinWheelText.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
