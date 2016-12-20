@@ -36,7 +36,15 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func swipeOccurred() {
+    @IBAction func handleSwipe(recognizer: UISwipeGestureRecognizer) {
+        sayGoodbye()
+    }
+    
+    @IBAction func buttonPressed() {
+        sayGoodbye()
+    }
+    
+    func sayGoodbye() {
         let randomNumber = getRandomNumber()
         print(randomNumber)
         for _ in 1...5 {

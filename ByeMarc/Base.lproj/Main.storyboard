@@ -37,7 +37,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Say Goodbye"/>
                                 <connections>
-                                    <action selector="swipeOccurred" destination="BYZ-38-t0r" eventType="touchUpInside" id="cqJ-5I-j2s"/>
+                                    <action selector="buttonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="CaL-r7-cy7"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vkT-dy-bri">
@@ -70,6 +70,12 @@
                             <constraint firstAttribute="trailingMargin" secondItem="vkT-dy-bri" secondAttribute="trailing" constant="83" id="l5n-h7-KVp"/>
                             <constraint firstItem="kZl-dy-23k" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="126" id="zo3-GG-7IO"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="fBz-tK-Gcn" appends="YES" id="hdn-TZ-sdI"/>
+                            <outletCollection property="gestureRecognizers" destination="Ps2-q2-G8T" appends="YES" id="t32-cw-Tph"/>
+                            <outletCollection property="gestureRecognizers" destination="9jY-Z7-33A" appends="YES" id="evy-BL-b0q"/>
+                            <outletCollection property="gestureRecognizers" destination="gp7-kd-M2q" appends="YES" id="sDK-hx-SGV"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="goodByePhraseLabel" destination="vkT-dy-bri" id="CfO-Fx-r1U"/>
@@ -78,6 +84,26 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="fBz-tK-Gcn">
+                    <connections>
+                        <action selector="handleSwipeWithRecognizer:" destination="BYZ-38-t0r" id="81m-Pd-U9b"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="left" id="Ps2-q2-G8T">
+                    <connections>
+                        <action selector="handleSwipeWithRecognizer:" destination="BYZ-38-t0r" id="HmM-c2-Y7Y"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="up" id="9jY-Z7-33A">
+                    <connections>
+                        <action selector="handleSwipeWithRecognizer:" destination="BYZ-38-t0r" id="SSj-H5-IlL"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="down" id="gp7-kd-M2q">
+                    <connections>
+                        <action selector="handleSwipeWithRecognizer:" destination="BYZ-38-t0r" id="70f-xB-eyq"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="24.637681159420293" y="-99.456521739130437"/>
         </scene>
