@@ -11,6 +11,7 @@ import AVFoundation
 
 class ViewController: UIViewController {
     
+    var accent = "en-US"
     let synth = AVSpeechSynthesizer()
     var selectedIndex: Int = 0
     let goodByePhrases: [String] = ["Goodbye Marc", "Cya later", "Well...bye", "I'm outta here", "Later bro", "Later alligator", "Peace out", "Bye"]
@@ -18,10 +19,13 @@ class ViewController: UIViewController {
     @IBOutlet var goodByePhraseLabel: UILabel?
     @IBOutlet var spinWheelView: UIView?
     @IBOutlet var spinWheelPointerView: UIView?
+    @IBOutlet var accentSelector: UISegmentedControl?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        accentSelector!.selectedSegmentIndex = 1
+        accentSelector!.addTarget(self, action:#selector(ViewController.accentSelectorChanged), for: .valueChanged)
         goodByePhraseLabel!.text = ""
         spinWheelPointerView!.backgroundColor = UIColor.init(colorLiteralRed: 1.0, green: 1.0, blue: 1.0, alpha: 0.0)
         let spinWheelTextView = MJSSpinWheelText(frame: spinWheelView!.frame)
@@ -34,6 +38,23 @@ class ViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func accentSelectorChanged() {
+        switch accentSelector!.selectedSegmentIndex {
+        case 0:
+            self.accent = "en-GB"
+            break
+        case 1:
+            self.accent = "en-US"
+            break
+        case 2:
+            self.accent = "en-AU"
+            break
+        default:
+            self.accent = "en-US"
+            break
+        }
     }
     
     @IBAction func handleSwipe(recognizer: UISwipeGestureRecognizer) {
@@ -61,6 +82,7 @@ class ViewController: UIViewController {
         self.goodByePhraseLabel!.text = selectedGoodByePhrase
         let myUtterance = AVSpeechUtterance(string: selectedGoodByePhrase)
         myUtterance.rate = 0.5
+        myUtterance.voice = AVSpeechSynthesisVoice(language: accent)
         synth.speak(myUtterance)
     }
     

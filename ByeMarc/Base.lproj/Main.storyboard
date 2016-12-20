@@ -59,15 +59,42 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Accent:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ajn-SY-vYc">
+                                <rect key="frame" x="177" y="644" width="60" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="bGy-un-Of9"/>
+                                    <constraint firstAttribute="height" constant="21" id="kUt-0k-lbB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="oQv-mv-7Jh">
+                                <rect key="frame" x="123" y="673" width="168" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="ajp-sB-zyE"/>
+                                    <constraint firstAttribute="width" constant="168" id="kfv-OP-B9X"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="GB"/>
+                                    <segment title="US"/>
+                                    <segment title="AU"/>
+                                </segments>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="vkT-dy-bri" secondAttribute="bottom" constant="80" id="ECd-LM-j9K"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="oQv-mv-7Jh" secondAttribute="bottom" constant="35" id="LMm-6b-l6P"/>
                             <constraint firstItem="kZl-dy-23k" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="21" id="LyC-Mi-TlA"/>
+                            <constraint firstItem="oQv-mv-7Jh" firstAttribute="top" secondItem="ajn-SY-vYc" secondAttribute="bottom" constant="8" id="TLa-m1-iPz"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ajn-SY-vYc" secondAttribute="trailing" constant="157" id="TmJ-1v-K1c"/>
                             <constraint firstAttribute="trailingMargin" secondItem="kZl-dy-23k" secondAttribute="trailing" constant="126" id="eHn-Ke-soe"/>
                             <constraint firstItem="vkT-dy-bri" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="83" id="jud-g1-jm0"/>
                             <constraint firstAttribute="trailingMargin" secondItem="vkT-dy-bri" secondAttribute="trailing" constant="83" id="l5n-h7-KVp"/>
+                            <constraint firstItem="ajn-SY-vYc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="157" id="rc9-7b-D2C"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="oQv-mv-7Jh" secondAttribute="trailing" constant="103" id="z9y-PT-iZS"/>
                             <constraint firstItem="kZl-dy-23k" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="126" id="zo3-GG-7IO"/>
                         </constraints>
                         <connections>
@@ -78,6 +105,7 @@
                         </connections>
                     </view>
                     <connections>
+                        <outlet property="accentSelector" destination="oQv-mv-7Jh" id="T9c-Kw-Gtf"/>
                         <outlet property="goodByePhraseLabel" destination="vkT-dy-bri" id="CfO-Fx-r1U"/>
                         <outlet property="spinWheelPointerView" destination="1OC-JR-baq" id="ako-uu-1mf"/>
                         <outlet property="spinWheelView" destination="bhQ-iK-qbu" id="65X-D3-jHx"/>
